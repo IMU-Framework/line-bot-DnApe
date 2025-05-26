@@ -1,7 +1,5 @@
 from flask import Flask, request, abort
-from linebot.v3 import Configuration, ApiClient
-from linebot.v3.messaging import MessagingApi
-from linebot.v3.webhook import WebhookHandler
+from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, FlexSendMessage, TextSendMessage
 from module.format1_carousel import build_format1_carousel
@@ -11,10 +9,8 @@ import os
 
 app = Flask(__name__)
 
-# 使用LINE V3 SDK正確初始化方式
-configuration = Configuration(access_token=os.getenv('LINE_CHANNEL_ACCESS_TOKEN'))
-api_client = ApiClient(configuration)
-line_bot_api = MessagingApi(api_client)
+# 使用 V2/V3 兼容初始化方式
+line_bot_api = LineBotApi(os.getenv('LINE_CHANNEL_ACCESS_TOKEN'))
 handler = WebhookHandler(os.getenv('LINE_CHANNEL_SECRET'))
 
 @app.route("/webhook", methods=['POST'])
@@ -49,4 +45,3 @@ def handle_message(event):
     else:
         print("Replying with simple text message")
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"收到訊息: {text}"))
-
