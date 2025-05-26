@@ -2,11 +2,9 @@
 from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
-from linebot.models import MessageEvent, TextMessage, FlexSendMessage, TextSendMessage
-from module.format1_carousel import build_format1_carousel
-from module.format2_carousel import build_format2_carousel
-from utils.utils import fetch_notion_data, build_email_carousel
+from linebot.models import MessageEvent, TextMessage, FlexSendMessage
 import os
+from utils.utils import fetch_notion_data, build_email_carousel
 
 app = Flask(__name__)
 
@@ -28,10 +26,13 @@ def handle_message(event):
     text = event.message.text
     if text == "外商email":
         notion_data = fetch_notion_data()
-        flex_message = build_email_carousel(notion_data)
-        line_bot_api.reply_message(event.reply_token, FlexSendMessage(alt_text="外商Email解析", contents=flex_message))
+        if notion_data:
+            flex_message = build_email_carousel(notion_data)
+            line_bot_api.reply_message(event.reply_token, FlexSendMessage(alt_text="外商Email解析", contents=flex_message))
+        else:
+            line_bot_api.reply_message(event.reply_token, TextMessage(text="查無資料，請確認Notion內容"))
     else:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"收到訊息: {text}"))
+        line_bot_api.reply_message(event.reply_token, TextMessage(text=f"你說的是: {text}"))
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=int(os.getenv("PORT", 5000)))
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))

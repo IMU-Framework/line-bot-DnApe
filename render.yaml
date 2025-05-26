@@ -1,11 +1,11 @@
 
 services:
   - type: web
-    name: imu-flexbot
+    name: line-bot-dnape
     env: python
     plan: free
-    buildCommand: ""
-    startCommand: python main.py
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn main:app --bind 0.0.0.0:$PORT
     envVars:
       - key: NOTION_TOKEN
         value: "YOUR_NOTION_TOKEN"
@@ -13,5 +13,5 @@ services:
         value: "YOUR_DB_ID"
       - key: LINE_CHANNEL_ACCESS_TOKEN
         value: "YOUR_LINE_TOKEN"
-      - key: LINE_REPLY_TOKEN
-        value: "YOUR_REPLY_TOKEN"
+      - key: LINE_CHANNEL_SECRET
+        value: "YOUR_LINE_SECRET"
