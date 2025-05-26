@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: line-bot-OPMS
+    name: line-bot-DnApe
     env: python
     region: singapore
     plan: free
