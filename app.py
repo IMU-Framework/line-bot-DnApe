@@ -52,19 +52,6 @@ def handle_message(event):
                 )
             )
 
-        # elif text == "油漆色號":
-        #     with open("flex_templates/paint.json", "r", encoding="utf-8") as f:
-        #         paint_flex = json.load(f)
-        #     api.reply_message(
-        #         # ReplyMessageRequest(
-        #         #     reply_token=event.reply_token,
-        #         #     # messages=[FlexMessage(
-        #         #     #     alt_text="油漆色號",
-        #         #     #     contents=FlexContainer.from_dict(paint_flex)
-        #         #     # )]
-        #         # )
-        #     )
-
         elif text in ["油漆色號", "油漆色卡", "油漆"]:
             try:
                 flex = build_paint_table_flex()
@@ -79,7 +66,7 @@ def handle_message(event):
                     )
                 )
             except Exception as e:
-                print("❌ 發送色卡失敗：", e)  # DEBUG
+                print("❌ 發送色卡失敗：", e) 
                 api.reply_message(
                     ReplyMessageRequest(
                         reply_token=event.reply_token,
@@ -102,6 +89,3 @@ def handle_message(event):
 
         else:
             return  # 不回應未指定指令
-
-# if __name__ == "__main__":
-#     app.run(debug=True)
