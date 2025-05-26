@@ -24,12 +24,17 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    if event.message.text == "外商email":
+    text = event.message.text
+    print(f"Received message: {text}")
+    if text == "外商email":
+        print("Fetching Notion data...")
         notion_data = fetch_notion_data()
         flex_message = build_email_carousel(notion_data)
         line_bot_api.reply_message(event.reply_token, FlexSendMessage(alt_text="外商Email解析", contents=flex_message))
+        print("Replied with Flex message")
     else:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"收到訊息: {event.message.text}"))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"收到訊息: {text}"))
+        print("Replied with Text message")
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=int(os.getenv("PORT", 5000)))
