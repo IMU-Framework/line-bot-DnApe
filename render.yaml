@@ -1,0 +1,17 @@
+
+services:
+  - type: web
+    name: imu-flexbot
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: python main.py
+    envVars:
+      - key: NOTION_TOKEN
+        value: "YOUR_NOTION_TOKEN"
+      - key: NOTION_DB_ID
+        value: "YOUR_DB_ID"
+      - key: LINE_CHANNEL_ACCESS_TOKEN
+        value: "YOUR_LINE_TOKEN"
+      - key: LINE_REPLY_TOKEN
+        value: "YOUR_REPLY_TOKEN"
