@@ -4,6 +4,7 @@ import requests, os
 NOTION_TOKEN = os.getenv('NOTION_TOKEN')
 DB_ID = os.getenv('NOTION_DB_ID')
 LINE_CHANNEL_ACCESS_TOKEN = os.getenv('LINE_CHANNEL_ACCESS_TOKEN')
+USER_REPLY_TOKEN = os.getenv('LINE_REPLY_TOKEN')
 
 def get_text(props, key, formula=False):
     if formula:
