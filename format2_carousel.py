@@ -1,5 +1,5 @@
 
-from utils import get_text, create_explanation_block, create_list_block, create_footer, create_question_bubble
+from utils.utils import get_text, create_explanation_block, create_list_block, create_footer, create_question_bubble
 
 def build_format2_carousel(props, title):
     explanation1 = get_text(props, 'Explanation1')
