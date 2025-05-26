@@ -1,5 +1,5 @@
-
 from flask import Flask, request, abort
+from linebot.v3 import Configuration, ApiClient
 from linebot.v3.messaging import MessagingApi
 from linebot.v3.webhook import WebhookHandler
 from linebot.exceptions import InvalidSignatureError
@@ -11,7 +11,10 @@ import os
 
 app = Flask(__name__)
 
-line_bot_api = MessagingApi(channel_access_token=os.getenv('LINE_CHANNEL_ACCESS_TOKEN'))
+# 使用LINE V3 SDK正確初始化方式
+configuration = Configuration(access_token=os.getenv('LINE_CHANNEL_ACCESS_TOKEN'))
+api_client = ApiClient(configuration)
+line_bot_api = MessagingApi(api_client)
 handler = WebhookHandler(os.getenv('LINE_CHANNEL_SECRET'))
 
 @app.route("/webhook", methods=['POST'])
@@ -34,13 +37,16 @@ def handle_message(event):
             notion_data = fetch_notion_data()
             if not notion_data:
                 print("No data fetched from Notion.")
+                line_bot_api.reply_message(event.reply_token, TextSendMessage(text="查無資料，請確認Notion內容"))
             else:
                 print(f"Notion data fetched: {notion_data}")
-            flex_message = build_email_carousel(notion_data)
-            line_bot_api.reply_message(event.reply_token, FlexSendMessage(alt_text="外商Email解析", contents=flex_message))
-            print("Successfully sent Flex message")
+                flex_message = build_email_carousel(notion_data)
+                line_bot_api.reply_message(event.reply_token, FlexSendMessage(alt_text="外商Email解析", contents=flex_message))
+                print("Successfully sent Flex message")
         except Exception as e:
             print(f"Error in processing '外商email': {e}")
+            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="系統錯誤，請稍後再試"))
     else:
         print("Replying with simple text message")
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"收到訊息: {text}"))
+
