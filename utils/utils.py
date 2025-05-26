@@ -97,9 +97,9 @@ def build_email_carousel(data):
         bubbles.append(bubble)
     return {"type": "carousel", "contents": bubbles}
 
-def send_line_reply(flex_message):
-    url = 'https://api.line.me/v2/bot/message/reply'
-    headers = {'Authorization': f'Bearer {LINE_CHANNEL_ACCESS_TOKEN}', 'Content-Type': 'application/json'}
-    body = {'replyToken': USER_REPLY_TOKEN, 'messages': [{'type': 'flex', 'altText': '外商Email解析', 'contents': flex_message}]}
-    response = requests.post(url, headers=headers, json=body)
-    print("LINE Response:", response.text)
+# def send_line_reply(flex_message):
+#     url = 'https://api.line.me/v2/bot/message/reply'
+#     headers = {'Authorization': f'Bearer {LINE_CHANNEL_ACCESS_TOKEN}', 'Content-Type': 'application/json'}
+#     body = {'replyToken': USER_REPLY_TOKEN, 'messages': [{'type': 'flex', 'altText': '外商Email解析', 'contents': flex_message}]}
+#     response = requests.post(url, headers=headers, json=body)
+#     print("LINE Response:", response.text)
