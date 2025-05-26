@@ -1,5 +1,5 @@
 
-from utils import get_text, create_paragraph_block, create_list_block, create_footer, create_question_bubble
+from utils.utils import get_text, create_paragraph_block, create_list_block, create_footer, create_question_bubble
 
 def build_format1_carousel(props, title):
     paragraphs = [get_text(props, f'Paragraph{i}') for i in range(1, 3)]
