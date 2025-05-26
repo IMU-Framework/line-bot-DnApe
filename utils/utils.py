@@ -4,7 +4,6 @@ import requests, os
 NOTION_TOKEN = os.getenv('NOTION_TOKEN')
 DB_ID = os.getenv('NOTION_DB_ID')
 LINE_CHANNEL_ACCESS_TOKEN = os.getenv('LINE_CHANNEL_ACCESS_TOKEN')
-USER_REPLY_TOKEN = os.getenv('LINE_REPLY_TOKEN')
 
 def get_text(props, key, formula=False):
     if formula:
@@ -96,10 +95,3 @@ def build_email_carousel(data):
         }
         bubbles.append(bubble)
     return {"type": "carousel", "contents": bubbles}
-
-# def send_line_reply(flex_message):
-#     url = 'https://api.line.me/v2/bot/message/reply'
-#     headers = {'Authorization': f'Bearer {LINE_CHANNEL_ACCESS_TOKEN}', 'Content-Type': 'application/json'}
-#     body = {'replyToken': USER_REPLY_TOKEN, 'messages': [{'type': 'flex', 'altText': '外商Email解析', 'contents': flex_message}]}
-#     response = requests.post(url, headers=headers, json=body)
-#     print("LINE Response:", response.text)
