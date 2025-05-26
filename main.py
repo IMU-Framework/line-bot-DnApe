@@ -30,3 +30,6 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, FlexSendMessage(alt_text="外商Email解析", contents=flex_message))
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"收到訊息: {event.message.text}"))
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=int(os.getenv("PORT", 5000)))
