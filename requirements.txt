@@ -1,4 +1,0 @@
-flask
-line-bot-sdk==3.13.0
-gunicorn
-requests>=2.28.0
