@@ -1,4 +1,3 @@
-
 from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
@@ -15,7 +14,7 @@ handler = WebhookHandler(os.getenv('LINE_CHANNEL_SECRET'))
 
 @app.route("/webhook", methods=['POST'])
 def callback():
-    signature = request.headers['X-Line-Signature']
+    signature = request.headers.get('X-Line-Signature')
     body = request.get_data(as_text=True)
     try:
         handler.handle(body, signature)
@@ -25,13 +24,9 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    text = event.message.text
-    if text == "外商email":
+    if event.message.text == "外商email":
         notion_data = fetch_notion_data()
         flex_message = build_email_carousel(notion_data)
         line_bot_api.reply_message(event.reply_token, FlexSendMessage(alt_text="外商Email解析", contents=flex_message))
     else:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"收到訊息: {text}"))
-
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=int(os.getenv("PORT", 5000)))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"收到訊息: {event.message.text}"))
