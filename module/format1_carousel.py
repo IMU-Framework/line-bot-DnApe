@@ -2,9 +2,9 @@
 from utils.utils import get_text, create_paragraph_block, create_list_block, create_footer, create_question_bubble
 
 def build_format1_carousel(props, title):
-    paragraphs = [get_text(props, f'Paragraph{i}') for i in range(1, 3)]
-    labels = [get_text(props, f'Label{i}') for i in range(1, 3)]
-    explanations = [get_text(props, f'Explanation{i}') for i in range(1, 3)]
+    paragraphs = [get_text(props, f'Paragraph{i}') for i in range(1, 5)]
+    labels = [get_text(props, f'Label{i}') for i in range(1, 5)]
+    explanations = [get_text(props, f'Explanation{i}') for i in range(1, 5)]
     common_lists = [get_text(props, f'List{i}') for i in range(1, 4)]
     questions = [get_text(props, f'Question{i}') for i in range(1, 3)]
     
