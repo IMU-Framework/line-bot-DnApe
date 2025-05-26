@@ -1,0 +1,557 @@
+{
+  "type": "carousel",
+  "contents": [
+    {
+      "type": "bubble",
+      "size": "deca",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "油漆－黃色",
+            "color": "#ffffff",
+            "align": "start",
+            "size": "xxl",
+            "gravity": "center",
+            "weight": "bold"
+          },
+          {
+            "type": "text",
+            "text": "P-CITRON",
+            "color": "#ffffff",
+            "align": "start",
+            "size": "lg",
+            "gravity": "center",
+            "margin": "lg"
+          }
+        ],
+        "paddingTop": "19px",
+        "paddingAll": "12px",
+        "paddingBottom": "16px",
+        "height": "150px"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "text",
+                "text": "位置1",
+                "color": "#8C8C8C",
+                "size": "sm",
+                "wrap": true,
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "text": "垂板",
+                "flex": 2,
+                "size": "sm",
+                "color": "#666666"
+              }
+            ],
+            "flex": 1
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "text",
+                "text": "位置2",
+                "flex": 1,
+                "size": "sm",
+                "color": "#8C8C8C"
+              },
+              {
+                "type": "text",
+                "text": "木作大J",
+                "flex": 2,
+                "color": "#666666",
+                "size": "sm"
+              }
+            ]
+          }
+        ],
+        "spacing": "md",
+        "paddingAll": "12px"
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "DULUX",
+            "align": "center",
+            "weight": "bold"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "63YY 53/710 青蕉黃",
+              "uri": "https://www.dulux.com.tw/zh/colour-palettes/63yy-53-710-qing-jiao-huang-1521969"
+            }
+          }
+        ]
+      },
+      "styles": {
+        "header": {
+          "backgroundColor": "#d5c019"
+        },
+        "footer": {
+          "separator": false
+        }
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "deca",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "油漆－湖藍",
+            "color": "#ffffff",
+            "align": "start",
+            "size": "xxl",
+            "gravity": "center",
+            "weight": "bold"
+          },
+          {
+            "type": "text",
+            "text": "P-OCEAN",
+            "color": "#ffffff",
+            "align": "start",
+            "size": "lg",
+            "gravity": "center",
+            "margin": "lg"
+          }
+        ],
+        "paddingTop": "19px",
+        "paddingAll": "12px",
+        "paddingBottom": "16px",
+        "height": "150px"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "text",
+                "text": "位置1",
+                "color": "#8C8C8C",
+                "size": "sm",
+                "wrap": true,
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "flex": 2,
+                "size": "sm",
+                "color": "#666666",
+                "text": "-"
+              }
+            ],
+            "flex": 1
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "text",
+                "text": "位置2",
+                "flex": 1,
+                "size": "sm",
+                "color": "#8C8C8C"
+              },
+              {
+                "type": "text",
+                "text": "-",
+                "flex": 2,
+                "color": "#666666",
+                "size": "sm"
+              }
+            ]
+          }
+        ],
+        "spacing": "md",
+        "paddingAll": "12px"
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "DULUX",
+            "align": "center",
+            "weight": "bold"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "90GG 15/398 聖誕樹青",
+              "uri": "https://www.dulux.com.tw/zh/colour-palettes/90gg-15-398-sheng-dan-shu-qing-1523617"
+            }
+          }
+        ]
+      },
+      "styles": {
+        "header": {
+          "backgroundColor": "#007a7b"
+        },
+        "footer": {
+          "separator": false
+        }
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "deca",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "油漆－薄荷",
+            "color": "#000000",
+            "align": "start",
+            "size": "xxl",
+            "gravity": "center",
+            "weight": "bold"
+          },
+          {
+            "type": "text",
+            "text": "P-MIST",
+            "color": "#000000",
+            "align": "start",
+            "size": "lg",
+            "gravity": "center",
+            "margin": "lg"
+          }
+        ],
+        "paddingTop": "19px",
+        "paddingAll": "12px",
+        "paddingBottom": "16px",
+        "height": "150px"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "text",
+                "text": "位置1",
+                "color": "#8C8C8C",
+                "size": "sm",
+                "wrap": true,
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "text": "小討論間",
+                "flex": 2,
+                "size": "sm",
+                "color": "#666666"
+              }
+            ],
+            "flex": 1
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "text",
+                "text": "位置2",
+                "color": "#8C8C8C",
+                "size": "sm",
+                "wrap": true,
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "text": "-",
+                "flex": 2,
+                "size": "sm",
+                "color": "#666666"
+              }
+            ],
+            "flex": 1
+          }
+        ],
+        "spacing": "md",
+        "paddingAll": "12px"
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "DULUX",
+            "align": "center",
+            "weight": "bold"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "50GG 71/180 湖水青",
+              "uri": "https://www.dulux.com.tw/zh/colour-palettes/50gg-71-180-hu-shui-qing-1522992"
+            }
+          }
+        ]
+      },
+      "styles": {
+        "header": {
+          "backgroundColor": "#b2e4d8"
+        },
+        "footer": {
+          "separator": false
+        }
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "deca",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "油漆－深灰",
+            "color": "#ffffff",
+            "align": "start",
+            "size": "xxl",
+            "gravity": "center",
+            "weight": "bold"
+          },
+          {
+            "type": "text",
+            "text": "P-GREY",
+            "color": "#ffffff",
+            "align": "start",
+            "size": "lg",
+            "gravity": "center",
+            "margin": "lg"
+          }
+        ],
+        "paddingTop": "19px",
+        "paddingAll": "12px",
+        "paddingBottom": "16px",
+        "height": "150px"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "text",
+                "text": "位置1",
+                "color": "#8C8C8C",
+                "size": "sm",
+                "wrap": true,
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "text": "大會議室",
+                "flex": 2,
+                "size": "sm",
+                "color": "#666666"
+              }
+            ],
+            "flex": 1
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "text",
+                "text": "位置2",
+                "flex": 1,
+                "size": "sm",
+                "color": "#8C8C8C"
+              },
+              {
+                "type": "text",
+                "text": "電箱",
+                "flex": 2,
+                "color": "#666666",
+                "size": "sm"
+              }
+            ]
+          }
+        ],
+        "spacing": "md",
+        "paddingAll": "12px"
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "DULUX",
+            "align": "center",
+            "weight": "bold"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "61GY 11/019 鏽斑灰",
+              "uri": "https://www.dulux.com.tw/zh/colour-palettes/61gy-11-019-xiu-ban-hui-1523202"
+            }
+          }
+        ]
+      },
+      "styles": {
+        "header": {
+          "backgroundColor": "#4f514c"
+        },
+        "footer": {
+          "separator": false
+        }
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "deca",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "油漆－珊瑚",
+            "color": "#ffffff",
+            "align": "start",
+            "size": "xxl",
+            "gravity": "center",
+            "weight": "bold"
+          },
+          {
+            "type": "text",
+            "text": "P-CORAL",
+            "color": "#ffffff",
+            "align": "start",
+            "size": "lg",
+            "gravity": "center",
+            "margin": "lg"
+          }
+        ],
+        "paddingTop": "19px",
+        "paddingAll": "12px",
+        "paddingBottom": "16px",
+        "height": "150px"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "text",
+                "text": "位置1",
+                "color": "#8C8C8C",
+                "size": "sm",
+                "wrap": true,
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "text": "哺集乳室",
+                "flex": 2,
+                "size": "sm",
+                "color": "#666666"
+              }
+            ],
+            "flex": 1
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "text",
+                "text": "位置2",
+                "flex": 1,
+                "size": "sm",
+                "color": "#8C8C8C"
+              },
+              {
+                "type": "text",
+                "text": "217補漆",
+                "flex": 2,
+                "color": "#666666",
+                "size": "sm"
+              }
+            ]
+          }
+        ],
+        "spacing": "md",
+        "paddingAll": "12px"
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "DULUX",
+            "align": "center",
+            "weight": "bold"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "30YR 53/188 粉紅詩人花",
+              "uri": "https://www.dulux.com.tw/zh/colour-palettes/30yr-53-188-fen-hong-shi-ren-hua-1522711"
+            }
+          }
+        ]
+      },
+      "styles": {
+        "header": {
+          "backgroundColor": "#e3b3a7"
+        },
+        "footer": {
+          "separator": false
+        }
+      }
+    }
+  ]
+}

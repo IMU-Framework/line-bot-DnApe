@@ -1,0 +1,323 @@
+{
+  "type": "carousel",
+  "contents": [
+    {
+      "type": "bubble",
+      "size": "deca",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Citron",
+            "color": "#000000",
+            "size": "xxl",
+            "weight": "bold"
+          },
+          {
+            "type": "text",
+            "text": "HEX: #D8DB2B",
+            "color": "#000000",
+            "size": "lg",
+            "margin": "lg"
+          }
+        ],
+        "paddingAll": "12px",
+        "height": "150px",
+        "backgroundColor": "#D8DB2B"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "RGB: 216 / 216 / 43",
+            "size": "sm",
+            "color": "#666666"
+          },
+          {
+            "type": "text",
+            "text": "CMYK: 19 / 5 / 97 / 0",
+            "size": "sm",
+            "color": "#666666"
+          },
+          {
+            "type": "text",
+            "text": "PMS: 396 U / 396 C",
+            "size": "sm",
+            "color": "#666666"
+          }
+        ],
+        "spacing": "md",
+        "paddingAll": "12px"
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "deca",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Ocean",
+            "color": "#ffffff",
+            "size": "xxl",
+            "weight": "bold"
+          },
+          {
+            "type": "text",
+            "text": "HEX: #175E5E",
+            "color": "#ffffff",
+            "size": "lg",
+            "margin": "lg"
+          }
+        ],
+        "paddingAll": "12px",
+        "height": "150px",
+        "backgroundColor": "#175E5E"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "RGB: 23 / 94 / 94",
+            "size": "sm",
+            "color": "#666666"
+          },
+          {
+            "type": "text",
+            "text": "CMYK: 87 / 45 / 57 / 27",
+            "size": "sm",
+            "color": "#666666"
+          },
+          {
+            "type": "text",
+            "text": "PMS: 3292 U / 3292 C",
+            "size": "sm",
+            "color": "#666666"
+          }
+        ],
+        "spacing": "md",
+        "paddingAll": "12px"
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "deca",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Mist",
+            "color": "#000000",
+            "size": "xxl",
+            "weight": "bold"
+          },
+          {
+            "type": "text",
+            "text": "HEX: #8CD1C8",
+            "color": "#000000",
+            "size": "lg",
+            "margin": "lg"
+          }
+        ],
+        "paddingAll": "12px",
+        "height": "150px",
+        "backgroundColor": "#8CD1C8"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "RGB: 140 / 209 / 200",
+            "size": "sm",
+            "color": "#666666"
+          },
+          {
+            "type": "text",
+            "text": "CMYK: 44 / 0 / 25 / 0",
+            "size": "sm",
+            "color": "#666666"
+          },
+          {
+            "type": "text",
+            "text": "PMS: 324 U / 324 C",
+            "size": "sm",
+            "color": "#666666"
+          }
+        ],
+        "spacing": "md",
+        "paddingAll": "12px"
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "deca",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Jubo's Signature Teal",
+            "color": "#ffffff",
+            "size": "xxl",
+            "weight": "bold"
+          },
+          {
+            "type": "text",
+            "text": "HEX: #00B2C0",
+            "color": "#ffffff",
+            "size": "lg",
+            "margin": "lg"
+          }
+        ],
+        "paddingAll": "12px",
+        "height": "150px",
+        "backgroundColor": "#00B2C0"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "RGB: 0 / 178 / 192",
+            "size": "sm",
+            "color": "#666666"
+          },
+          {
+            "type": "text",
+            "text": "CMYK: 87 / 0 / 28 / 0",
+            "size": "sm",
+            "color": "#666666"
+          },
+          {
+            "type": "text",
+            "text": "PMS: 7466 U / 7466 C",
+            "size": "sm",
+            "color": "#666666"
+          }
+        ],
+        "spacing": "md",
+        "paddingAll": "12px"
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "deca",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Jubo's Signature Grey",
+            "color": "#ffffff",
+            "size": "xxl",
+            "weight": "bold"
+          },
+          {
+            "type": "text",
+            "text": "HEX: #373A36",
+            "color": "#ffffff",
+            "size": "lg",
+            "margin": "lg"
+          }
+        ],
+        "paddingAll": "12px",
+        "height": "150px",
+        "backgroundColor": "#373A36"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "RGB: 55 / 58 / 54",
+            "size": "sm",
+            "color": "#666666"
+          },
+          {
+            "type": "text",
+            "text": "CMYK: 57 / 47 / 53 / 66",
+            "size": "sm",
+            "color": "#666666"
+          },
+          {
+            "type": "text",
+            "text": "PMS: 419 U / 419 C",
+            "size": "sm",
+            "color": "#666666"
+          }
+        ],
+        "spacing": "md",
+        "paddingAll": "12px"
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "deca",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Deep Forest",
+            "color": "#ffffff",
+            "size": "xxl",
+            "weight": "bold"
+          },
+          {
+            "type": "text",
+            "text": "HEX: #08484E",
+            "color": "#ffffff",
+            "size": "lg",
+            "margin": "lg"
+          }
+        ],
+        "paddingAll": "12px",
+        "height": "150px",
+        "backgroundColor": "#08484E"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "RGB: 8 / 72 / 78",
+            "size": "sm",
+            "color": "#666666"
+          },
+          {
+            "type": "text",
+            "text": "CMYK: 89 / 47 / 50 / 47",
+            "size": "sm",
+            "color": "#666666"
+          },
+          {
+            "type": "text",
+            "text": "PMS: 7722 U / 7722 C",
+            "size": "sm",
+            "color": "#666666"
+          }
+        ],
+        "spacing": "md",
+        "paddingAll": "12px"
+      }
+    }
+  ]
+}
