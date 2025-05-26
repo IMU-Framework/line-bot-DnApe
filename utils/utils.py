@@ -79,13 +79,13 @@ def build_email_carousel(data):
         bubble = {
             "type": "bubble", "size": "mega",
             "header": {"type": "box", "layout": "horizontal", "contents": [
-                {"type": "text", "text": f"#{idx}", "flex": 1, "color": "#ffffff", "size": "lg"},
+                {"type": "text", "text": f"#{idx}", "flex": 2, "color": "#ffffff", "size": "lg"},
                 {"type": "text", "text": title, "color": "#ffffff", "size": "lg", "weight": "bold", "flex": 8}
             ], "backgroundColor": "#17406D"},
             "body": {"type": "box", "layout": "vertical", "contents": [
                 {"type": "box", "layout": "horizontal", "contents": [
                     {"type": "box", "layout": "vertical", "contents": [], "borderWidth": "medium", "borderColor": "#BCC3CC", "width": "1px", "cornerRadius": "lg", "backgroundColor": "#BCC3CC"},
-                    {"type": "text", "text": email_content, "wrap": True, "size": "lg", "margin": "lg"}
+                    {"type": "text", "text": email_content, "wrap": True, "size": "xs", "margin": "lg"}
                 ]}, {"type": "separator", "margin": "lg", "color": "#DDE7F2"}
             ]},
             "footer": {"type": "box", "layout": "horizontal", "contents": [
