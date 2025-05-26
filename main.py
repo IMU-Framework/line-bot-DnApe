@@ -24,7 +24,7 @@ handler = WebhookHandler(CHANNEL_SECRET)
 def health_check():
     return "OK", 200
 
-@app.route("/webhook", methods=['POST'])
+@app.route("/callback", methods=['POST'])
 def callback():
     signature = request.headers.get('X-Line-Signature', '')
     body = request.get_data(as_text=True)
