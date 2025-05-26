@@ -2,7 +2,7 @@
 import requests, os
 from format1_carousel import build_format1_carousel
 from format2_carousel import build_format2_carousel
-from utils import get_text, fetch_notion_data, build_email_carousel, send_line_reply
+from utils.utils import get_text, fetch_notion_data, build_email_carousel, send_line_reply
 
 NOTION_TOKEN = os.getenv('NOTION_TOKEN')
 DB_ID = os.getenv('NOTION_DB_ID')
