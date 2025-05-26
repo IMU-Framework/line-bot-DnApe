@@ -5,12 +5,3 @@ services:
     plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn main:app --bind 0.0.0.0:$PORT
-    envVars:
-      - key: NOTION_TOKEN
-        value: "YOUR_NOTION_TOKEN"
-      - key: NOTION_DB_ID
-        value: "YOUR_DB_ID"
-      - key: LINE_CHANNEL_ACCESS_TOKEN
-        value: "YOUR_LINE_TOKEN"
-      - key: LINE_CHANNEL_SECRET
-        value: "YOUR_LINE_SECRET"
