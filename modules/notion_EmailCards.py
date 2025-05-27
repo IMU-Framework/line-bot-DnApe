@@ -147,7 +147,7 @@ def build_email_table_flex():
         ]
         
         # 添加列表項目
-        for i, list_item in enumerate(list_items[:3], 1):  # 只使用前3個
+        for i, list_item in enumerate(list_items[:4], 1):  # 只使用前4個
             if list_item != "-":  # 只添加非空項目
                 body_contents.append({
                     "type": "box",
@@ -163,7 +163,7 @@ def build_email_table_flex():
                         {
                             "type": "text",
                             "text": list_item,
-                            "flex": 5,
+                            "flex": 6,
                             "size": "sm",
                             "color": "#666666"
                         }
@@ -172,28 +172,38 @@ def build_email_table_flex():
 
         bubble = {
             "type": "bubble",
-            "size": "micro",
+            "size": "deca",
             "header": {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [
                     {
-                        "type": "text",
-                        "text": content_format,
-                        "color": "#BFBFBF",  # 灰字
-                        "align": "start",
-                        "size": "xs",
-                        "gravity": "center",
-                        "weight": "bold"
-                    },
-                    {
-                        "type": "text",
-                        "text": f"#{index}",  # 添加編號
-                        "color": "#ffffff",  # 白字
-                        "align": "start",
-                        "size": "sm",
-                        "gravity": "center",
-                        "weight": "bold"
+                        "type": "box",
+                        "layout": "baseline",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": f"#{index}",  # 添加編號
+                                "color": "#ffffff",  # 白字
+                                "size": "sm",
+                                "flex": 1,
+                                "weight": "bold",
+                                "align": "start"
+                            },
+                            {
+                                "type": "text",
+                                "text": content_format,
+                                "color": (
+                                    "#FFE066" if content_format == "情境解析" else  # 亮黃色
+                                    "#FF9EBB" if content_format == "逐句解析" else  # 亮粉紅色
+                                    "#BFBFBF"  # 預設灰色
+                                ),
+                                "size": "xs",
+                                "flex": 2,
+                                "weight": "bold",
+                                "align": "end"
+                            }
+                        ]
                     },
                     {
                         "type": "text",
