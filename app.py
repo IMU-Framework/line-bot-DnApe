@@ -11,7 +11,7 @@ from linebot.v3.messaging import (
 )
 
 from modules.notion_paint import build_paint_table_flex
-from modules.notion_email import build_email_table_flex  # 確保這個導入存在
+from modules.notion_EmailCards import build_email_table_flex
 
 app = Flask(__name__)
 
