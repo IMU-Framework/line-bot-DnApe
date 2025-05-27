@@ -13,5 +13,5 @@ line-bot-opms/
 │
 └── modules/                  # 動態 Flex Message fetching Notion DB
     ├── notion_paint.py       # 產生油漆色卡 .json
-    └── notion_Emails.py      # 產生Email卡片 .json
+    └── notion_EmailCards.py      # 產生Email卡片 .json
 ```
