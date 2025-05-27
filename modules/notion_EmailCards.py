@@ -131,7 +131,7 @@ def build_email_table_flex():
         body_contents = [
             {
                 "type": "text",
-                "text": content,
+                "text": "❝" + content,
                 "color": "#000000",  #黑字
                 "align": "start",
                 "size": "sm",
@@ -172,7 +172,7 @@ def build_email_table_flex():
 
         bubble = {
             "type": "bubble",
-            "size": "deca",
+            "size": "micro",
             "header": {
                 "type": "box",
                 "layout": "vertical",
@@ -213,7 +213,8 @@ def build_email_table_flex():
                         "size": "lg",
                         "gravity": "center",
                         "weight": "bold",
-                        "wrap": True
+                        "wrap": True,
+                        "margin": "lg"
                     },
                 ],
                 "paddingAll": "12px",
