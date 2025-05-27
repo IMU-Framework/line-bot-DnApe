@@ -11,7 +11,7 @@ from linebot.v3.messaging import (
 )
 
 from modules.notion_paint import build_paint_table_flex
-from modules.notion_email import build_email_table_flex
+from modules.notion_email import build_email_table_flex  # 確保這個導入存在
 
 app = Flask(__name__)
 
@@ -75,7 +75,7 @@ def handle_message(event):
                     )
                 )
 
-         elif text in ["油漆色號", "油漆色卡", "油漆"]:
+        elif text in ["油漆色號", "油漆色卡", "油漆"]:
             try:
                 flex = build_paint_table_flex()
                 print("✅ Flex JSON 輸出：", json.dumps(flex, ensure_ascii=False, indent=2))  # DEBUG
@@ -97,5 +97,31 @@ def handle_message(event):
                     )
                 )
 
+        elif text in ["企業識別", "cis"]:
+            try:
+                with open("flex_templates/cis.json", "r", encoding="utf-8") as f:
+                    cis_flex = json.load(f)
+                api.reply_message(
+                    ReplyMessageRequest(
+                        reply_token=event.reply_token,
+                        messages=[FlexMessage(
+                            alt_text="企業識別色卡",
+                            contents=FlexContainer.from_dict(cis_flex)
+                        )]
+                    )
+                )
+            except Exception as e:
+                print("❌ 發送企業識別色卡失敗：", e)
+                api.reply_message(
+                    ReplyMessageRequest(
+                        reply_token=event.reply_token,
+                        messages=[TextMessage(text="⚠️ 企業識別色卡讀取失敗，請稍後再試")]
+                    )
+                )
+
         else:
             return  # 不回應未指定指令
+
+if __name__ == "__main__":
+    # 本地開發時使用
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
