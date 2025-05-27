@@ -86,6 +86,15 @@ def handle_message(event):
                     )]
                 )
             )
+        elif text in ["外商email", "商務英文"]:
+            api.reply_message(
+                ReplyMessageRequest(
+                    reply_token=event.reply_token,
+                    messages=[TextMessage(
+                        text="請輸入【逐句解析】或【情境解析】"
+                    )]
+                )
+            )
 
         else:
             return  # 不回應未指定指令
