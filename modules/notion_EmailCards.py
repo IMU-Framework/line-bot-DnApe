@@ -107,8 +107,6 @@ def build_email_table_flex():
         list_items = all_items["list"]
         
         # URI 處理 - 如果為空則完全禁用按鈕
-        uri = props.get("uri", {}).get("url", "")
-
         if uri:
             footer_content = {
                 "type": "button",
