@@ -4,6 +4,7 @@ import requests
 NOTION_TOKEN = os.getenv("NOTION_API_KEY_DNAPE")
 NOTION_DATABASE_ID = os.getenv("NOTION_EMAIL_TABLE_DB")
 
+
 def fetch_notion_email_data():
     """
     從 Notion 資料庫獲取email範例
@@ -23,7 +24,7 @@ def fetch_notion_email_data():
 
 def build_email_table_flex():
     """
-    構建油漆表格的 Flex Message
+    構建Email卡片的 Flex Message
     
     Returns:
         dict: LINE Flex Message 格式的輪播卡片
@@ -87,9 +88,8 @@ def build_email_table_flex():
         # URI 處理 - 如果為空則完全禁用按鈕
         uri = props.get("uri", {}).get("url", "")
         button_disabled = not bool(uri)  # 如果 uri 為空則禁用按鈕
-        
+
         if not uri:
-            # 當 URI 為空時，回傳postback
             footer_content = {
                 "type": "button",
                 "style": "link",
@@ -97,7 +97,8 @@ def build_email_table_flex():
                 "action": {
                     "type": "postback",
                     "label": "看解析",
-                    "data": buttondata or "user requests for detail"  # 使用 buttondata 或預設值
+                    "data": f"view_detail:{buttondata}" if buttondata else "view_detail:default",
+                    "displayText": "正在查詢解析內容..."  # 這會在用戶點擊後顯示在聊天中
                 }
             }
         else:
