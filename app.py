@@ -11,6 +11,7 @@ from linebot.v3.messaging import (
 )
 
 from modules.notion_paint import build_paint_table_flex
+from modules.notion_email import build_email_table_flex
 
 app = Flask(__name__)
 
@@ -47,12 +48,34 @@ def handle_message(event):
                 ReplyMessageRequest(
                     reply_token=event.reply_token,
                     messages=[TextMessage(
-                        text="請輸入下列指令之一：\n- 油漆色號\n- 企業識別 or CIS"
+                        text="請輸入下列指令之一：\n- 外商email or 商務英文\n- 油漆色號\n- 企業識別 or CIS"
                     )]
                 )
             )
 
-        elif text in ["油漆色號", "油漆色卡", "油漆"]:
+        elif text in ["外商email", "商務英文"]:
+            try:
+                flex = build_email_table_flex()
+                print("✅ Email範例輸出：", json.dumps(flex, ensure_ascii=False, indent=2))  # DEBUG
+                api.reply_message(
+                    ReplyMessageRequest(
+                        reply_token=event.reply_token,
+                        messages=[FlexMessage(
+                            alt_text="外商email",
+                            contents=FlexContainer.from_dict(flex)
+                        )]
+                    )
+                )
+            except Exception as e:
+                print("❌ 發送Email卡片失敗：", e) 
+                api.reply_message(
+                    ReplyMessageRequest(
+                        reply_token=event.reply_token,
+                        messages=[TextMessage(text="⚠️ Email卡片讀取失敗，請稍後再試")]
+                    )
+                )
+
+         elif text in ["油漆色號", "油漆色卡", "油漆"]:
             try:
                 flex = build_paint_table_flex()
                 print("✅ Flex JSON 輸出：", json.dumps(flex, ensure_ascii=False, indent=2))  # DEBUG
@@ -73,28 +96,6 @@ def handle_message(event):
                         messages=[TextMessage(text="⚠️ 色卡讀取失敗，請稍後再試")]
                     )
                 )
-
-        elif text in ["企業識別", "cis"]:
-            with open("flex_templates/cis.json", "r", encoding="utf-8") as f:
-                cis_flex = json.load(f)
-            api.reply_message(
-                ReplyMessageRequest(
-                    reply_token=event.reply_token,
-                    messages=[FlexMessage(
-                        alt_text="企業識別色卡",
-                        contents=FlexContainer.from_dict(cis_flex)
-                    )]
-                )
-            )
-        elif text in ["外商email", "商務英文"]:
-            api.reply_message(
-                ReplyMessageRequest(
-                    reply_token=event.reply_token,
-                    messages=[TextMessage(
-                        text="請輸入【逐句解析】或【情境解析】"
-                    )]
-                )
-            )
 
         else:
             return  # 不回應未指定指令
