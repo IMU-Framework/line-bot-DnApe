@@ -85,7 +85,7 @@ def build_email_table_flex():
         content_format = props.get("Format", {}).get("select", {}).get("name", "") or "Other"
         title = get_text(props.get("Title", {}).get("title", [])) or "未命名"
         content = get_text(props.get("EmailContent", {}).get("rich_text", [])) or "-"
-        buttondata = props.get("ButtonData", {}).get("formula", {}).get("string", "")
+        uri = props.get("ButtonData", {}).get("formula", {}).get("string", "")
 
         ## 序列化欄位配置處理
         item_configs = {
@@ -108,7 +108,6 @@ def build_email_table_flex():
         
         # URI 處理 - 如果為空則完全禁用按鈕
         uri = props.get("uri", {}).get("url", "")
-        button_disabled = not bool(uri)  # 如果 uri 為空則禁用按鈕
 
         if uri:
             footer_content = {
@@ -166,7 +165,7 @@ def build_email_table_flex():
                         {
                             "type": "text",
                             "text": list_item,
-                            "flex": 3,
+                            "flex": 5,
                             "size": "sm",
                             "color": "#666666"
                         }
@@ -203,9 +202,10 @@ def build_email_table_flex():
                         "text": title,
                         "color": "#ffffff",  # 白字
                         "align": "start",
-                        "size": "xl",
+                        "size": "lg",
                         "gravity": "center",
-                        "weight": "bold"
+                        "weight": "bold",
+                        "wrap": True
                     },
                 ],
                 "paddingAll": "12px",
@@ -214,7 +214,6 @@ def build_email_table_flex():
                 "type": "box",
                 "layout": "vertical",
                 "spacing": "md",
-                "paddingAll": "12px",
                 "contents": body_contents
             },
             "footer": {
