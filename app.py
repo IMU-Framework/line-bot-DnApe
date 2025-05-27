@@ -43,25 +43,6 @@ def handle_postback(event):
     with ApiClient(configuration) as api_client:
         api = MessagingApi(api_client)
         
-        # 根據 data 的值來決定回應內容
-        if data.startswith("view_detail:"):  # 修改這裡以匹配按鈕中的數據格式
-            detail_id = data.split(":", 1)[1] if ":" in data else "default"
-            
-            # 這裡可以根據 detail_id 查詢不同的解析內容
-            api.reply_message(
-                ReplyMessageRequest(
-                    reply_token=event.reply_token,
-                    messages=[TextMessage(text=f"這是關於 {detail_id} 的詳細解析內容...")]
-                )
-            )
-        # 為了向後兼容，保留原來的處理方式
-        elif data.startswith("user requests for detail"):
-            api.reply_message(
-                ReplyMessageRequest(
-                    reply_token=event.reply_token,
-                    messages=[TextMessage(text="這是詳細解析內容...")]
-                )
-            )
 
 @handler.add(MessageEvent, message=TextMessageContent)
 def handle_message(event):
